@@ -1,3 +1,8 @@
+resource "azurerm_resource_group" "main" {
+  name     = "myResourceGroup"
+  location = "West Europe"
+}
+
 resource "azure_storage_account" "main" {
   name                     = "mytfstatestorage"
   resource_group_name      = azurerm_resource_group.main.name
